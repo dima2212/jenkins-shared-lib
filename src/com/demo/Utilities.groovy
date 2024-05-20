@@ -1,7 +1,7 @@
 package com.demo
 
-class Utilities implements Serializable {
-    def getBuildCause(context){
+class Utilities {
+    def static getBuildCause(def context){
         def cause = context.currentBuild.getBuildCauses()[0]
         if(cause.upstreamProject)
             return cause.upstreamProject
